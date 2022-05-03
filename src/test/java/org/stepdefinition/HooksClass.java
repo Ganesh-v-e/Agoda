@@ -19,6 +19,7 @@ public class HooksClass extends BaseClass {
 		browserLaunch();
 		url("https://www.agoda.com/");
 
+		
 	}
 
 	@After

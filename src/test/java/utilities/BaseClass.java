@@ -216,4 +216,8 @@ public static void tkscreenshot(String name) throws IOException {
 
 }
 
+public static void CurUrl(String url) {
+	
+	driver.getCurrentUrl();
+}
 }
