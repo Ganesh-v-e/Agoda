@@ -3,9 +3,9 @@ Feature: To validate the login functionality of the page
 
   Background: 
     Given User launches the browser
-
+@dummy
   Scenario Outline: Check whether user able to sign in with valid username and invalid password
-    When User should click sign in button and type valid username "<username>" and invalid password "<password>"
+    When User should click sign in button and type valid username <"username"> and invalid password <"password">
     And User should click sign in button
     Then User should navigate to invalid credential page and close the browser
 

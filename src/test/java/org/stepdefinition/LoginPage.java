@@ -12,18 +12,18 @@ import utilities.BaseClass;
 
 public class LoginPage extends BaseClass {
 
-	@When("User should click sign in button and type valid username {string} and invalid password {string}")
-	public void user_should_click_sign_in_button_and_type_valid_username_and_invalid_password(String s1, String s2)
-			throws InterruptedException {
-
-		AgodaHomePage alp = new AgodaHomePage();
-		alp.getToclickSignIn().click();
-		Thread.sleep(2000);
-		frame(driver.findElement(By.xpath("//iframe[@title='Universal login']")));
-		driver.findElement(By.id("email")).sendKeys(s1);
-		driver.findElement(By.id("password")).sendKeys(s2);
-
-	}
+	 @When("User should click sign in button and type valid username {string} and invalid password {string}")
+	 public void
+	 user_should_click_sign_in_button_and_type_valid_username_and_invalid_password1(String s1, String s2) throws InterruptedException {
+	
+	 AgodaHomePage alp = new AgodaHomePage();
+	 alp.getToclickSignIn().click();
+	 Thread.sleep(2000);
+	 frame(driver.findElement(By.xpath("//iframe[@title='Universal login']")));
+	 driver.findElement(By.id("email")).sendKeys(s1);
+	 driver.findElement(By.id("password")).sendKeys(s2);
+	
+	 }
 
 	@When("User should click sign in button")
 	public void user_should_click_sign_in_button() {
@@ -89,4 +89,16 @@ public class LoginPage extends BaseClass {
 
 	}
 
+	@When("User should click sign in button and type valid username <{string}> and invalid password <{string}>")
+	public void user_should_click_sign_in_button_and_type_valid_username_and_invalid_password(String s1,
+			String s2) throws InterruptedException {
+		 AgodaHomePage alp = new AgodaHomePage();
+		 alp.getToclickSignIn().click();
+		 Thread.sleep(2000);
+		
+		frame(driver.findElement(By.xpath("//iframe[@title='Universal login']")));
+		driver.findElement(By.id("email")).sendKeys(s1);
+		driver.findElement(By.id("password")).sendKeys(s2);
+
+	}
 }

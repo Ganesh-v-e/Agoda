@@ -8,7 +8,7 @@ import report.JVMreport;
 
 
 @RunWith(Cucumber.class)
-	@CucumberOptions(features="src\\test\\resources\\", glue="org.stepdefinition", dryRun=false, plugin = {"html:target\\reports",
+	@CucumberOptions(features="src\\test\\resources\\", glue="org.stepdefinition", tags = {"@dummy"} , dryRun=false, plugin = {"html:target\\reports",
 	                                                                                                       "junit:target\\reports\\agoda.xml", 		
 			                                                                                               "json:target\\reports\\agoda.json",
 	                                                                                                       "rerun:src\\test\\resources\\reRun\\failedcases.txt"})
